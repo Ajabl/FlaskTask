@@ -24,7 +24,7 @@ class User(db.Model):
 
 @app.route('/')
 def home():
-    return 'Strona główna'
+    return render_template("main_page.html")
 
 @app.route('/form', methods = ['GET', 'POST'])
 def form():
@@ -35,9 +35,13 @@ def form():
         new_user = User(name = name, surname=surname, age=age)
         db.session.add(new_user)
         db.session.commit()
-        return f'Dodano {name} do bazy!'
+        return users()
     return render_template("form.html")
 
+@app.route('/users')
+def users():
+    all_users = User.query.all()
+    return render_template("users.html", users=all_users)
 
 if __name__ == '__main__':
     with app.app_context():
