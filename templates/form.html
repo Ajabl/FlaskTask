@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Form</title>
-</head>
-<h1>Podaj imię</h1>
+
+{% extends "base.html" %}
+
+{% block title %}Formularz{% endblock %}
+
+{% block content %}
+
+<h1>Podaj dane użytkownika</h1>
 <form method="post">
   <label for="imie">Imię</label>
   <input type="text" name="imie" id="imie">
@@ -15,9 +16,4 @@
   <input type="submit" value="Wyślij">
 </form>
 
-<a href="/">Strona główna</a><br>
-<a href="users">Wyświetl wszystkich użytkowników</a>
-<body>
-
-</body>
-</html>
+{% endblock %}
