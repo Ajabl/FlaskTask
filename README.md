@@ -1,3 +1,5 @@
 Dane Aplikacji
 
-Aplikacja do dodawania i usuwania użytkowników z możliwością podoglądu i usuwania logów.
+Aplikacja do dodawania i usuwania użytkowników.
+Umożliwia pobranie danych użytkownika w formie API.
+Daje możliwość podglądu i usuwania logów.
