@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+
+{% block title %}Użytkownicy API{% endblock %}
+
+{% block content %}
+
+<h1>Wprowadź ID użytkownika:</h1>
+
+<form method="GET" action="/api_users" target="_blank">
+  <input type="number" name="id" required placeholder="np. 1">
+  <button type="submit">Wyślij</button>
+  (API otworzy się w nowej karcie)
+</form>
+
+{% endblock %}

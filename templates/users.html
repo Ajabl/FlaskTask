@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Użytkownicy{% endblock %}
+
+{% block content %}
+
+  <h1>Lista użytkowników</h1>
+  {% if users %}
+    {% for user in users %}
+      <p>{{ user.id }}.  {{ user.name }} {{ user.surname }} (wiek: {{ user.age }})</p>
+    {% endfor %}
+    <br>
+    <form method="POST" action="/users">
+      <button type="submit">Wyczyść</button>
+    </form>
+  {% else %}
+  Brak użytkowników do wyświetlenia
+  {% endif %}
+{% endblock %}

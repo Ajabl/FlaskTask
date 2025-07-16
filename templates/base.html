@@ -1,0 +1,24 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Moja Aplikacja{% endblock %}</title>
+</head>
+<body>
+<center
+  <!-- Stałe MENU -->
+  <nav>
+    <a href="/">Strona główna</a> |
+    <a href="/form">Dodaj użytkownika</a> |
+    <a href="/users">Lista użytkowników</a> |
+    <a href="/api_users">Pokaż API wybranego użytkownika</a>
+    <a href="/logs">Sprawdz logi aplikacji</a>
+  </nav>
+  <hr>
+
+  <!-- Tu pojawi się zawartość podstron -->
+  {% block content %}{% endblock %}
+</center
+</body>
+</html>
